@@ -1,0 +1,55 @@
+/* *** custom style admin page *** */
+
+
+/* tulis */
+.form-title {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top:10px;
+}
+
+.form-large {
+  padding-right:480px;
+}
+
+/* post */
+
+.th-id {
+width: 5%;
+}
+.th-judul {
+width: 45%
+}
+.th-waktu {
+width: 20%;
+}
+.th-status {
+width: 15%;
+}
+.th-action {
+width: 15%;
+}
+
+.thc-judul {
+width: 35%
+}
+.thc-waktu {
+width: 30%;
+}
+
+
+.th-id-user {
+width: 5%;
+}
+.th-nama {
+width: 25%
+}
+.th-email {
+width: 25%;
+}
+.th-username {
+width: 25%;
+}
+.th-action-user {
+width: 20%;
+}

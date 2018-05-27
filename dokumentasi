@@ -1,0 +1,60 @@
+
+SET @num :=0;
+UPDATE blog SET id = @num := (@num+1);
+ALTER TABLE blog AUTO_INCREMENT =1;
+
+
+SELECT blog.id, blog.judul, blog.isi, blog.gambar,
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+
+INSERT INTO blog (judul,isi,gambar) VALUES ('$judul','$isi','$i');
+SET @id = LAST_INSERT_ID();
+
+INSERT IGNORE INTO tag (judul_tag) VALUES ('$tag');
+SET @id_tag = LAST_INSERT_ID();
+INSERT INTO has_property (id,id_tag) VALUES(@id, @id_tag);
+
+INSERT INTO blog (judul,isi,gambar) VALUES ('koko','koko','koko.jpg');
+SET @id = LAST_INSERT_ID();
+
+INSERT IGNORE INTO tags (judul_tag) VALUES ('cinta');
+SET @id_tags = LAST_INSERT_ID();
+INSERT INTO artikel_tags (id_artikel, id_tags) VALUES(@id, @id_tags);
+<a href="kategori.php?id=<?= $row['id_tag']; ?>"><?php echo $row['judul_tag'];?></a>
+SELECT * from artikel ORDER BY id_artikel DESC LIMIT 3 offset 3
+
+
+
+
+<nav class="navbar navbar-color navbar-fixed-top">
+  <div class="container">
+
+    <!-- Brand and toggle get grouped for better mobile display
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home </a></li>
+        <li><a href="#profil">Profile</a></li>
+    <li><a href="#download-cv">CV</a></li>
+      <li><a href="#portofolio">Portofolio</a></li>
+      <li><a href="#blog">Blog</a></li>
+      </ul>
+
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
